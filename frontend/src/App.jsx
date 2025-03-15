@@ -181,6 +181,7 @@ const MapUpdater = ({ center, zoom }) => {
 };
 
 // Component to handle routing logic with improved display
+// Component to handle routing logic with improved display
 const RoutingMachine = ({ waypoints, onRoutesFound }) => {
   const map = useMap();
   const routingControlRef = useRef(null);
@@ -331,7 +332,7 @@ const RoutingMachine = ({ waypoints, onRoutesFound }) => {
       const bounds = routeLine.getBounds();
       map.fitBounds(bounds, {
         padding: [150, 150], // Add generous padding
-        maxZoom: 1          // Limit maximum zoom to see more context
+        maxZoom: 13          // Limit maximum zoom to see more context
       });
       
       // Call the callback with estimated data
